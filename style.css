@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding-top: 0;
+}
+
+body{
+    background: pink;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+
+/* Main Container */
+
+.main-container{
+    display: grid;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background: url(img/img5.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+/* Main Header */
+
+.main-header{
+    display: grid;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 60px;
+}
+
+#first-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+#second-title{
+    font-family: 'Style Script', cursive;
+    font-size: 6rem;
+}
+/* Introduction */
+
+.intro{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+    margin-right: 10px;
+    margin-top: 9px;
+    padding-top: 30px;
+}
+
+.intro h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4rem;
+}
+
+.intro p{
+    text-align: justify;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+/* Year Level */
+
+.year-level{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 2fr); 
+    justify-items: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.first-year{
+    text-decoration: none;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    background: rgba(255, 204, 204, 0.8);
+    transition: all 500ms ease-in;
+    transform: matrix();
+}
+
+.first-year h1{
+    text-align: center;
+}
+
+.first-year h3{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.first-year p{
+    padding-top: 10px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: lowercase;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.see-more {
+    border: 3px solid palevioletred;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+.see-more a{
+    padding-top: 100px;
+}
+
+/* Images */
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-gap: 5px;
+    justify-items: center;
+    padding-top: 10px;
+}
+
+/* Keyframes */
+
+/* Main-Header */
+
+@keyframes first-title{
+    0%    {top: -50px}
+    100%  {top: 60px}
+    
+}
+
+#first-title{
+    animation-name: first-title;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-iteration-count: 2;
+}
+
+@keyframes second-title{
+    0%  {left: -1000px}
+    100% {left: 0;}
+}
+
+#second-title{
+    animation-name: second-title;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-iteration-count: 2;
+}
+
+/* Intro */
+
+.intro{
+    animation-name: red-to-black;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation: red-to-black 4s linear 0s 2 alternate-reverse;
+}
+
+@keyframes red-to-black {
+	0% {
+		background:  yellow; 
+		transform: translate(0px, 0px);
+	}
+
+	50% {
+		background:  #ffffcc; 
+		transform: translate(10px, 10px);
+	}
+
+	100% {
+		background: rgb(255, 204, 255); 
+		transform: translate(20px, 20px);
+	}
+}
+
+/* Year Level */
+
+.first-year:hover{
+    background: rgba(147, 187, 255, 0.5);
+    transition: ease-out;
+    transform: scale(1.1);
+
+}
+
+/* Gallery */
+
+img:hover {
+    transform: scale(1.3);
+}
+
+/*Reponsiveness*/
+
